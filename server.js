@@ -27,7 +27,8 @@ app.use(express.json());
 
 // route handling
 
-app.use('/service-provider', require('./routes/hotelRepRoutes'));
+app.use('/space-provider', require('./routes/spaceProviderRoutes'));
+app.use('/space', require('./routes/spaceRoutes'));
 app.use('/', require('./routes/root'));
 
 app.all('*', (req, res) => {

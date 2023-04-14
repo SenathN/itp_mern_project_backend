@@ -8,6 +8,7 @@ const logEvent = async (message, logFileName) => {
     const dateTime = `${format(new Date(), 'yyyy-MM-dd\tHH:mm:ss')}`;
     const logStmt = `${dateTime}\t${uuid()}\t${message}\n`;
 
+    console.log(`${logStmt}`)
     try {
         if (!fs.existsSync(path.join(__dirname, "..", 'logs')))
             await fsPromises.mkdir(path.join(__dirname, "..", 'logs'));
