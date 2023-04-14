@@ -1,6 +1,4 @@
 const Company = require ('../models/Company');
-const companyController = require('./companyController');
-const asyncHandler = require ('express-async-handler');
 
 async function simple_returnOrCreateCompanyByName (name) {
     const company = await Company.findOne({ "name" : name }) ;
